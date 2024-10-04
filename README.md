@@ -10,24 +10,17 @@ To use the Dockerfile contained in the repository, follow these steps:
 1. Clone the repository to your local machine using the following command:
 
    ```bash
-   git clone git@github.com:Bokomoko/astral-sh-uv-python.git
+   git clone git@github.com:Bokomoko/astral-sh-uv-python.git <project-name>
    ```
 
-2. Navigate to the directory where the Dockerfile is located.
-
-3. Build the Docker image using the following command:
+2. Change into the project directory and launch VSCode:
 
    ```bash
-   docker build -t <image-name> .
+   cd <project-name>
+   code .
    ```
 
-4. Once the image is built, you can run a container based on this image using the following command:
-
-   ```bash
-   docker run -it <image-name>
-   ```
-
-To use it in Visual Studio Code's dev containers, you can include a devcontainer.json configuration file in the root of your project. The devcontainer.json file should specify the Dockerfile to use and any additional settings for the development container. Here's an example of a devcontainer.json file:
+3. When you open the project in VSCode, it will automatically detect the Dockerfile and ask to use it to create a development container. The first time it will take a bit longer. After the creation of the image, future projects will start much faster.
 
 A sample devcontainer.json file is provided in the repository. You can modify it to suit your specific needs.
 
